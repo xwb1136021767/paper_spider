@@ -1,0 +1,116 @@
+2022-09-23 16:57:12 [root] WARNING: $ ACM_Spider已爬取：20
+2022-09-23 16:57:27 [root] WARNING: $ ACM_Spider已爬取：40
+2022-09-23 16:57:42 [root] WARNING: $ ACM_Spider已爬取：60
+2022-09-23 16:57:57 [root] WARNING: $ ACM_Spider已爬取：80
+2022-09-23 16:58:12 [root] WARNING: $ ACM_Spider已爬取：100
+2022-09-23 16:58:27 [root] WARNING: $ ACM_Spider已爬取：120
+2022-09-23 16:58:42 [root] WARNING: $ ACM_Spider已爬取：140
+2022-09-23 16:58:57 [root] WARNING: $ ACM_Spider已爬取：160
+2022-09-23 16:59:12 [root] WARNING: $ ACM_Spider已爬取：180
+2022-09-23 16:59:26 [root] WARNING: $ ACM_Spider已爬取：200
+2022-09-23 16:59:40 [root] WARNING: $ ACM_Spider已爬取：220
+2022-09-23 16:59:55 [root] WARNING: $ ACM_Spider已爬取：240
+2022-09-23 17:00:09 [root] WARNING: $ ACM_Spider已爬取：260
+2022-09-23 17:00:26 [root] WARNING: $ ACM_Spider已爬取：280
+2022-09-23 17:00:35 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-09-23 17:00:35 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\threadpool.py", line 244, in inContext
+    result = inContext.theWork()  # type: ignore[attr-defined]
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\threadpool.py", line 260, in <lambda>
+    inContext.theWork = lambda: context.call(  # type: ignore[attr-defined]
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\context.py", line 117, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\context.py", line 82, in callWithContext
+    return func(*args, **kw)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\enterprise\adbapi.py", line 443, in _runInteraction
+    result = interaction(trans, *args, **kw)
+  File "C:\Users\Lenovo\PycharmProjects\ACM-IEEE-arXiv-Spider\acaSpider\pipelines.py", line 93, in do_insert
+    cursor.execute(insert_sql, (title, authors, year, typex, subjects, url, abstract, citation))
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'authors' at row 1")
+2022-09-23 17:00:40 [root] WARNING: $ ACM_Spider已爬取：300
+2022-09-23 17:00:54 [root] WARNING: $ ACM_Spider已爬取：320
+2022-09-23 17:01:10 [root] WARNING: $ ACM_Spider已爬取：340
+2022-09-23 17:01:20 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-09-23 17:01:20 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\threadpool.py", line 244, in inContext
+    result = inContext.theWork()  # type: ignore[attr-defined]
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\threadpool.py", line 260, in <lambda>
+    inContext.theWork = lambda: context.call(  # type: ignore[attr-defined]
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\context.py", line 117, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\context.py", line 82, in callWithContext
+    return func(*args, **kw)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\enterprise\adbapi.py", line 443, in _runInteraction
+    result = interaction(trans, *args, **kw)
+  File "C:\Users\Lenovo\PycharmProjects\ACM-IEEE-arXiv-Spider\acaSpider\pipelines.py", line 93, in do_insert
+    cursor.execute(insert_sql, (title, authors, year, typex, subjects, url, abstract, citation))
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'authors' at row 1")
+2022-09-23 17:01:24 [root] WARNING: $ ACM_Spider已爬取：360
+2022-09-23 17:01:33 [twisted] CRITICAL: Unhandled error in Deferred:
+2022-09-23 17:01:33 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\threadpool.py", line 244, in inContext
+    result = inContext.theWork()  # type: ignore[attr-defined]
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\threadpool.py", line 260, in <lambda>
+    inContext.theWork = lambda: context.call(  # type: ignore[attr-defined]
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\context.py", line 117, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\python\context.py", line 82, in callWithContext
+    return func(*args, **kw)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\twisted\enterprise\adbapi.py", line 443, in _runInteraction
+    result = interaction(trans, *args, **kw)
+  File "C:\Users\Lenovo\PycharmProjects\ACM-IEEE-arXiv-Spider\acaSpider\pipelines.py", line 93, in do_insert
+    cursor.execute(insert_sql, (title, authors, year, typex, subjects, url, abstract, citation))
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Users\Lenovo\anaconda3\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'authors' at row 1")
+2022-09-23 17:01:39 [root] WARNING: $ ACM_Spider已爬取：380
+2022-09-23 17:01:51 [root] WARNING: $ ACM_Spider已爬取：400

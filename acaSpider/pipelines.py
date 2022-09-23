@@ -14,28 +14,28 @@ from twisted.enterprise import adbapi
 
 class AcaspiderPipeline(object):
     def process_item(self, item, spider):
-        for title, authors, year, typex, subjects, url, abstract, citation in zip(item['title'], item['authors'], item['year'],
-                                                                        item['typex'], item['subjects'], item['url'], item['abstract'],
-                                                                        item['citation']):
-            print('========================')
-            print('标题：', title)
-            print('作者：', authors)
-            print('年份：', year)
-            print('期刊/会议：', typex)
-            print('主题：', subjects)
-            print('URL：', url)
-            print('摘要：', abstract)
-            print('引用：', citation)
-            print('========================')
+        # for title, authors, year, typex, subjects, url, abstract, citation in zip(item['title'], item['authors'], item['year'],
+        #                                                                 item['typex'], item['subjects'], item['url'], item['abstract'],
+        #                                                                 item['citation']):
+            # print('========================')
+            # print('标题：', title)
+            # print('作者：', authors)
+            # print('年份：', year)
+            # print('期刊/会议：', typex)
+            # print('主题：', subjects)
+            # print('URL：', url)
+            # print('摘要：', abstract)
+            # print('引用：', citation)
+            # print('========================')
 
-            txt_str = '\n========================' + '\n标题：' + title + '\n作者：' + authors + '\n年份：' + year + \
-                      '\n期刊/会议：' + typex + '\n主题：' + subjects + '\nURL：' + url + '\n摘要：' + abstract + \
-                      '\n引用：' + citation + '\n========================'
-            self.write2txt(txt_str)
+            # txt_str = '\n========================' + '\n标题：' + title + '\n作者：' + authors + '\n年份：' + year + \
+            #           '\n期刊/会议：' + typex + '\n主题：' + subjects + '\nURL：' + url + '\n摘要：' + abstract + \
+            #           '\n引用：' + citation + '\n========================'
+            # self.write2txt(txt_str)
 
-            json_str = {'title': title, 'authors': authors, 'year': year, 'type': typex, 'subjects': subjects,
-                        'URL': url, 'abstract': abstract, 'citation': citation}
-            self.write2json(json_str)
+            # json_str = {'title': title, 'authors': authors, 'year': year, 'type': typex, 'subjects': subjects,
+            #             'URL': url, 'abstract': abstract, 'citation': citation}
+            # self.write2json(json_str)
         return item
 
     def write2txt(self, txt_str):

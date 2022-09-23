@@ -17,7 +17,9 @@ SPIDER_MODULES = ['acaSpider.spiders']
 NEWSPIDER_MODULE = 'acaSpider.spiders'
 
 # URL for Spider
-ACM_URL = ['https://dl.acm.org/action/doSearch?ConceptID=1'] # 填入ACM的地址
+# multi-stream
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22multi-stream+ssd%22%29']
+ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22NVMe+ssd%22+OR+%22nvme+SSD%22%29'] # 填入ACM的地址
 ARXIV_URL = ['???']
 IEEE_URL = ['???']
 
@@ -67,7 +69,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 6
+DOWNLOAD_DELAY = 10
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
