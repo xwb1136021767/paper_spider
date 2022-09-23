@@ -13,6 +13,16 @@ abstract = scrapy.Field()
 citation = scrapy.Field()
 '''
 
+Periodicals = ['FAST', 'MSST', 'ATC', 'MASCOTS', 'SYSTOR', 'HPCA', 'ISCA', 'SOSP', 'OSDI',
+               'NSDI', 'TOCS', 'TOS', 'TCAD', 'TC', 'TPDS', 'PPoPP', 'DAC', 'HPCA', 'MICRO',
+               'SC', 'ISCA', 'USENIX ATC', 'JSAC', 'TMC', 'TON', 'SIGCOMM', 'MobiCom', 'INFOCOM',
+               'NSDI', 'TDSC', 'TIFS', 'CCS', 'EUROCRYPT', 'S&P', 'CRYPTO', 'USENIX Security',
+               'TOPLAS', 'TOSEM', 'TSE', 'PLDI', 'POPL', 'FSE/ESEC', 'OOPSLA', 'ASE', 'ICSE',
+               'ISSTA', 'OSDI', 'TODS', 'TOIS', 'TKDE', 'VLDBJ', 'HotStorage'
+               ]
+
+CITE_LIMIT = 30
+
 
 class IEEESpider(scrapy.Spider):
     name = "IEEE_Spider"
@@ -33,10 +43,23 @@ class IEEESpider(scrapy.Spider):
         item['citation'] = []
         print(len(response))
         for res in response:
+            type = res.xpath('.//xpl-results-item/div/div[@class="col result-item-align"]/div[@class="description"]/a/text()').extract()[0]
+            if_add = False
+            for periodical in Periodicals:
+                if periodical in type:
+                    if_add = True
+                    break
+            if if_add:
+                item['typex'].append(type)
+            else :
+                continue;
+
+            # citation =
+
             item['title'].append(res.xpath('.//xpl-results-item/div/div/h2/a/text()').extract()[0])
             item['authors'].append(self.merge_authors(res.xpath('.//xpl-results-item/div/div[@class="col result-item-align"]/p[@class="author"]//span//xpl-modal//a//span//text()').extract()))
             item['year'].append(self.process4year(res.xpath('.//xpl-results-item/div/div[@class="col result-item-align"]/div[@class="description"]/div[@class="publisher-info-container"]/span/text()').extract()[0]))
-            item['typex'].append(res.xpath('.//xpl-results-item/div/div[@class="col result-item-align"]/div[@class="description"]/a/text()').extract()[0])
+            # item['typex'].append(res.xpath('.//xpl-results-item/div/div[@class="col result-item-align"]/div[@class="description"]/a/text()').extract()[0])
             item['subjects'].append(' ')
             item['url'].append('https://ieeexplore.ieee.org'+res.xpath('.//xpl-results-item/div/div/h2/a/@href').extract()[0])
             item['abstract'].append(res.xpath('.//div[@class="js-displayer-content u-mt-1 stats-SearchResults_DocResult_ViewMore hide"]/span/text()').extract()[0])

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ACM-IEEE-arXiv Info Spider (Developing)
 
 ![](https://img.shields.io/badge/Status-Developing-brightgreen.svg)
@@ -86,3 +87,6 @@ etc.
 
 # Preview
 ![](https://github.com/xyjigsaw/ACM-IEEE-arXiv-Spider/blob/master/MySQL-Spider.png)
+=======
+# paper_spider
+>>>>>>> paper_spider/main

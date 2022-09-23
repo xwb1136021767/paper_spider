@@ -19,7 +19,28 @@ NEWSPIDER_MODULE = 'acaSpider.spiders'
 # URL for Spider
 # multi-stream
 # ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22multi-stream+ssd%22%29']
-ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22NVMe+ssd%22+OR+%22nvme+SSD%22%29'] # 填入ACM的地址
+
+# nvme
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22NVMe+ssd%22+OR+%22nvme+SSD%22%29'] # 填入ACM的地址
+
+# ull ssd
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22ull+ssd%22+OR+%22ultra-low+latency+ssd%22%29']
+
+# zns ssd
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22zns+ssd%22+OR+%22zone+namespace+ssd%22%29']
+
+# kv ssd
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=%22kv+ssd%22+OR+%22key+value+ssd%22']
+
+#ossd
+# ACM_URL = ['']
+
+# 2b-ssd
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%222b+ssd%22+OR+%22byte-addressable+ssd%22%29']
+
+# smart ssd
+# ACM_URL = ['https://dl.acm.org/action/doSearch?fillQuickSearch=false&target=advanced&expand=all&AfterMonth=1&AfterYear=2013&BeforeMonth=12&BeforeYear=2022&AllField=AllField%3A%28%22smart+ssd%22%29']
+
 ARXIV_URL = ['???']
 IEEE_URL = ['???']
 

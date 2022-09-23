@@ -11,7 +11,7 @@ Periodicals = ['FAST', 'MSST', 'ATC', 'MASCOTS', 'SYSTOR', 'HPCA', 'ISCA', 'SOSP
                'SC', 'ISCA', 'USENIX ATC', 'JSAC', 'TMC', 'TON', 'SIGCOMM', 'MobiCom', 'INFOCOM',
                'NSDI', 'TDSC', 'TIFS', 'CCS', 'EUROCRYPT', 'S&P', 'CRYPTO', 'USENIX Security',
                'TOPLAS', 'TOSEM', 'TSE', 'PLDI', 'POPL', 'FSE/ESEC', 'OOPSLA', 'ASE', 'ICSE',
-               'ISSTA', 'OSDI', 'TODS', 'TOIS', 'TKDE', 'VLDBJ'
+               'ISSTA', 'OSDI', 'TODS', 'TOIS', 'TKDE', 'VLDBJ', 'HotStorage'
                ]
 
 CITE_LIMIT = 30
